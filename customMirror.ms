@@ -6,8 +6,6 @@ function customMirror x: false y: false z: false =
 		modSlice = modPanel.getCurrentObject() 
 		modPanel.addModToSelection (symmetry ()) ui:on
 		modSymm  = modPanel.getCurrentObject() 
-		format "Slice %\n" modSlice
-		format "Symmetry %\n" modSymm
 			
 		modSlice.name = "Mirror Slice"
 		modSymm.name = "Mirror Symmetry"
