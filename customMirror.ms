@@ -2,11 +2,14 @@ function customMirror x: false y: false z: false =
 (
 	undo "Slice workaround" on
 	(
+		modPanel.addModToSelection (Poly_Select ()) ui:on
+		modPoly = modPanel.getCurrentObject() 
 		modPanel.addModToSelection (SliceModifier ()) ui:on
 		modSlice = modPanel.getCurrentObject() 
 		modPanel.addModToSelection (symmetry ()) ui:on
 		modSymm  = modPanel.getCurrentObject() 
-			
+	
+		modPoly.name = "Mirror Select none"
 		modSlice.name = "Mirror Slice"
 		modSymm.name = "Mirror Symmetry"
 		modSlice.PlanarX = x
